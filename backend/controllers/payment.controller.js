@@ -92,11 +92,11 @@ export const returnURL = async(req,res) =>{
 				});
 				await newOrder.save();
 				await user.save();
-				res.redirect('http://localhost:5173/purchase-success')
+				res.redirect('https://shop-cxs4.onrender.com/purchase-success')
 				//FE bỏ dòng send Redirect lên trang payment Successful giùm
 			}
 			else
-				res.redirect('http://localhost:5173/purchase-cancel')
+				res.redirect('https://shop-cxs4.onrender.com/purchase-cancel')
 				//FE bỏ dòng send Redirect lên trang payment Failed giùm
 		}
 		else{
