@@ -21,7 +21,7 @@ export const createPaymentURL = async (req, res) => {
 		let tmnCode = process.env.VNP_TMN_CODE;//"AO1BPVDX";
 		let secretKey = process.env.VNP_SECRET; //"DGSXDF0E9ZYSEU6NZLIMM8U071J0ZKI2";
 		let vnpUrl = process.env.VNP_URL;//"https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-		let returnUrl = "http://localhost:5000/api/payments/return";
+		let returnUrl = "https://shop-cxs4.onrender.com/api/payments/return";
 		let orderId = moment(date).format('DDHHmmss');
 		let amount = req.body["amount"];
 		let bankCode = "";
@@ -92,11 +92,11 @@ export const returnURL = async(req,res) =>{
 				});
 				await newOrder.save();
 				await user.save();
-				res.redirect('http://localhost:5173/purchase-success')
+				res.redirect('https://shop-cxs4.onrender.com/purchase-success')
 				//FE bỏ dòng send Redirect lên trang payment Successful giùm
 			}
 			else
-				res.redirect('http://localhost:5173/purchase-cancel')
+				res.redirect('https://shop-cxs4.onrender.com/purchase-cancel')
 				//FE bỏ dòng send Redirect lên trang payment Failed giùm
 		}
 		else{
