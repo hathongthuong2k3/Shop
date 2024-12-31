@@ -1,5 +1,5 @@
 
-T đã setup sẵn rồi, chỉ có npm install xong npm run start là được. Còn muốn tìm hiểu kĩ hơn nên xem kĩ video. Payment k cần setup lại.
+
 
 ### Setup .env file
 
